@@ -1,13 +1,12 @@
-# app/main.py
-
 from fastapi import FastAPI
 from .database import init_db
 
 # Função que será executada na inicialização
 def on_startup():
-    print("Criando tabelas no banco de dados...")
+    print("Creating tables in the database...")
     init_db()
-    print("Tabelas criadas com sucesso.")
+    print("Tables created successfully.")
+    
 
 # Cria a aplicação FastAPI e associa o evento de startup
 app = FastAPI(
@@ -18,5 +17,3 @@ app = FastAPI(
 @app.get("/")
 def get_root():
     return {"status": "servidor online"}
-
-# ... (seus outros endpoints virão aqui)

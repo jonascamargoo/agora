@@ -6,6 +6,7 @@ from sqlalchemy.orm import sessionmaker
 from sqlmodel import SQLModel, create_engine
 
 from .config import DATABASE_URL
+from src import models # do not remove it!
 
 
 # O "engine" é o ponto de entrada para o banco de dados.
@@ -30,4 +31,8 @@ def get_db():
     finally:
         db.close()
         
-
+        
+# Para acessar!
+# sudo -u postgres psql -d agora_db
+# \dt
+# \q
