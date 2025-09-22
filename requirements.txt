@@ -1,0 +1,10 @@
+# --- Servidor ---
+fastapi==0.111.0          # O framework web para construir a API
+uvicorn[standard]==0.29.0  # O servidor ASGI para executar a aplicação FastAPI
+psycopg2-binary==2.9.9    # O driver para conectar ao banco de dados PostgreSQL
+sqlmodel==0.0.18          # ORM para interagir com o banco de dados e validar dados
+
+# --- Cliente / Testes ---
+requests==2.31.0          # Biblioteca para o client.py fazer requisições HTTP
+
+python-dotenv==0.21.1
