@@ -14,7 +14,9 @@ from src import models # do not remove it!
 engine = create_engine(DATABASE_URL)
 
 def init_db():
+    print("Tentando criar tabelas...")
     SQLModel.metadata.create_all(engine)
+    print("Comando para criar tabelas executado.")
 
 # Cada instância de SessionLocal será uma sessão com o banco de dados.
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
